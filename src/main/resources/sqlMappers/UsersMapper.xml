@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.greentown.learn.bootdemo.mapper.UsersMapper">
+
+
+
+	<select id="getUserList" resultType="com.greentown.learn.bootdemo.model.dto.UserDO">
+		select * from tb_user where status=0
+	</select>
+	
+	
+</mapper>
