@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+  <!--<localRepository>~/.m2/repository</localRepository>-->
+
+  <localRepository>C:/Users/hh/.m2/repository</localRepository>
+  <pluginGroups>
+    <!-- pluginGroup
+     | Specifies a further group identifier to use for plugin lookup.
+    <pluginGroup>com.your.plugins</pluginGroup>
+    -->
+    <pluginGroup>org.mortbay.jetty</pluginGroup>
+  </pluginGroups>
+
+  <proxies>
+    <!-- proxy
+     | Specification for one proxy, to be used in connecting to the network.
+     |
+    <proxy>
+      <id>optional</id>
+      <active>true</active>
+      <protocol>http</protocol>
+      <username>proxyuser</username>
+      <password>proxypass</password>
+      <host>proxy.host.net</host>
+      <port>80</port>
+      <nonProxyHosts>local.net|some.host.com</nonProxyHosts>
+    </proxy>
+    -->
+  </proxies>
+
+ 
+  <servers>
+	<server>  
+		<id>releases</id>  
+		<username>admin</username>  
+		<password>1qazxsw2</password>  
+	</server>  
+	<server>  
+		<id>snapshots</id>  
+		<username>admin</username>  
+		<password>1qazxsw2</password>  
+	</server>    
+  </servers>
+
+ 
+  <mirrors>
+    <!-- mirror
+     | Specifies a repository mirror site to use instead of a given repository. The repository that
+     | this mirror serves has an ID that matches the mirrorOf element of this mirror. IDs are used
+     | for inheritance and direct lookup purposes, and must be unique across the set of mirrors.
+     |
+    <mirror>
+      <id>mirrorId</id>
+      <mirrorOf>repositoryId</mirrorOf>
+      <name>Human Readable Name for this Mirror.</name>
+      <url>http://my.repository.com/repo/path</url>
+    </mirror>
+     -->
+  </mirrors>
+  
+ 
+  <profiles>
+	<profile>  
+		<id>dev</id>  
+		<repositories>  
+			<repository>  
+				<id>pro-nexus-public</id>  
+				<url>http://101.37.27.64:8081/nexus/content/groups/public/</url>  
+					<releases>  
+					<enabled>true</enabled>  
+				</releases>  
+				<snapshots>  
+					<enabled>true</enabled>  
+				</snapshots>  
+			</repository>
+			<repository>  
+				<id>pro-nexus-central</id>  
+				<url>http://101.37.27.64:8081/nexus/content/repositories/central/</url>  
+					<releases>  
+					<enabled>true</enabled>  
+				</releases>  
+				<snapshots>  
+					<enabled>true</enabled>  
+				</snapshots>  
+			</repository>  
+			<repository>  
+				<id>pro-nexus-thirdparty</id>  
+				<url>http://101.37.27.64:8081/nexus/content/repositories/thirdparty/</url>  
+					<releases>  
+					<enabled>true</enabled>  
+				</releases>  
+				<snapshots>  
+					<enabled>true</enabled>  
+				</snapshots>  
+			</repository> 
+			<repository>  
+				<id>pro-nexus-releases</id>  
+				<url>http://101.37.27.64:8081/nexus/content/repositories/releases/</url>  
+					<releases>  
+					<enabled>true</enabled>  
+				</releases>  
+				<snapshots>  
+					<enabled>true</enabled>  
+				</snapshots>  
+			</repository> 
+			<repository>  
+				<id>pro-nexus-snapshots</id>  
+				<url>http://101.37.27.64:8081/nexus/content/repositories/snapshots/</url>  
+					<releases>  
+					<enabled>true</enabled>  
+				</releases>  
+				<snapshots>  
+					<enabled>true</enabled>  
+				</snapshots>  
+			</repository> 
+			<repository>  
+				<id>pro-nexus-springsource</id>  
+				<url>http://101.37.27.64:8081/nexus/content/repositories/springsource/</url>  
+					<releases>  
+					<enabled>true</enabled>  
+				</releases>  
+				<snapshots>  
+					<enabled>true</enabled>  
+				</snapshots>  
+			</repository> 
+		</repositories>  
+	</profile>  
+  </profiles>
+
+  <!-- activeProfiles
+   | List of profiles that are active for all builds.
+   |
+  <activeProfiles>
+    <activeProfile>alwaysActiveProfile</activeProfile>
+    <activeProfile>anotherAlwaysActiveProfile</activeProfile>
+  </activeProfiles>
+  -->
+  <activeProfiles>  
+	<activeProfile>dev</activeProfile>  
+  </activeProfiles>  
+</settings>
