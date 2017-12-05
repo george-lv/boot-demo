@@ -1,10 +1,6 @@
 package com.greentown.learn.bootdemo.controller;
 
-import static com.google.common.base.Predicates.or;
-import static springfox.documentation.builders.PathSelectors.regex;
-
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 import com.google.common.base.Predicate;
@@ -14,11 +10,13 @@ import springfox.documentation.service.ApiInfo;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
+import static springfox.documentation.builders.PathSelectors.regex;
+import static com.google.common.base.Predicates.or;
 
 @Configuration
 @EnableSwagger2
-@ComponentScan(basePackages={"com.greentown.learn.bootdemo.controller"})
-public class Swagger2 {
+public class SwaggerConfig {
+
 	@Bean
 	public Docket postsApi() {
 		return new Docket(DocumentationType.SWAGGER_2).groupName("public-api")
@@ -26,15 +24,15 @@ public class Swagger2 {
 	}
 
 	private Predicate<String> postPaths() {
-		return or(regex("/api/posts.*"), regex("/api/javainuse.*"));
+		return or(regex("/api/posts.*"), regex("/api/hello.*"));
 	}
 
 	private ApiInfo apiInfo() {
-		return new ApiInfoBuilder().title("JavaInUse API")
-				.description("JavaInUse API reference for developers")
-				.termsOfServiceUrl("http://javainuse.com")
-				.contact("javainuse@gmail.com").license("JavaInUse License")
-				.licenseUrl("javainuse@gmail.com").version("1.0").build();
+		return new ApiInfoBuilder().title("lvziqiang API")
+				.description("spring cloud  API reference for developers")
+				.termsOfServiceUrl("http://github.com")
+				.contact("ziqiang.lv@gmail.com").license("lvziqiang License")
+				.licenseUrl("ziqiang.lv@gmail.com").version("1.0").build();
 	}
 
 }

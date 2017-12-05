@@ -35,7 +35,7 @@ public class JsonpFastJsonHttpMessageConverter extends AbstractGenericHttpMessag
 
     public JsonpFastJsonHttpMessageConverter() {
         super(new MediaType("application", "json", UTF8),
-            new MediaType("application", "*+json", UTF8), new MediaType("text", "html", UTF8),
+            new MediaType("application", "*+json", UTF8), new MediaType("text", "html", UTF8),new MediaType("text", "plain", UTF8),
             new MediaType("text", "*+html", UTF8));
     }
 
