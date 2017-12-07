@@ -2,7 +2,8 @@ package com.greentown.learn.bootdemo.model.vo;
 
 import java.util.Date;
 
-public class UserVO {
+public class UserVO extends BaseVO{
+	
 	private String name;
 
 	private String mobile;
