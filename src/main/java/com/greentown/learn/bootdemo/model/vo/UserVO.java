@@ -2,20 +2,31 @@ package com.greentown.learn.bootdemo.model.vo;
 
 import java.util.Date;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+@ApiModel("用户对象")
 public class UserVO extends BaseVO{
 	
+	@ApiModelProperty("用户姓名")
 	private String name;
 
+	@ApiModelProperty("手机号码")
 	private String mobile;
 
+	@ApiModelProperty("用户类型")
 	private String type;
 
+	@ApiModelProperty("身份证")
 	private String identity;
 
+	@ApiModelProperty("经纪人")
 	private String broker;
 
+	@ApiModelProperty("vip标志")
 	private Integer vip;
-
+	
+	@ApiModelProperty("房源ID")
 	private Long houseId;
 	
 	private Date lastLoginTime;

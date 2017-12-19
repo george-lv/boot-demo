@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.greentown.learn.bootdemo.model.vo.UserVO;
 
+import io.swagger.annotations.ApiOperation;
+
 @RestController
 @RefreshScope
 public class HelloController {
@@ -23,6 +25,7 @@ public class HelloController {
 	private String msg;
 	
 	@RequestMapping(method = RequestMethod.GET, value = "/api/hello")
+	@ApiOperation("获取")
 	public String sayHello() {
 		
 		redisTemplate.opsForValue().set("test", "test01");
@@ -31,6 +34,18 @@ public class HelloController {
 	}
 	
 	
+	@ApiOperation("获取用户信息")
+	@RequestMapping(method = RequestMethod.GET, value = "/api/hello/user")
+	public UserVO getUser() {
+		UserVO user=new UserVO();
+		user.setBroker("吕自强");
+		user.setHouseId(12222L);
+		redisTemplate.opsForValue().set("test", "test01");
+		return user;
+	}
+	
+	
+	@ApiOperation("添加")
 	@RequestMapping(method = RequestMethod.POST, value = "/api/hello/helloPut")
 	public String putHello(@RequestBody UserVO uservo) {
 		return "Swagger Hello World";
