@@ -59,7 +59,7 @@ import java.util.Map;
  *
  */
 @Component
-@ControllerAdvice(basePackages = { "com.greentown.learn.bootdemo.controller"})
+@ControllerAdvice(basePackages = { "com.xinchang.learn.bootdemo.controller"})
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public class ResponseHandler implements HandlerExceptionResolver, ResponseBodyAdvice<Object> {
     private static final Logger logger = LoggerFactory.getLogger(ResponseHandler.class);
