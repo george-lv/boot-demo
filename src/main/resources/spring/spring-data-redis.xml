@@ -36,7 +36,7 @@
 		</property>
 		<property name="valueSerializer">
 			<bean
-				class="com.greentown.common.web.FastJsonRedisSerializer" />
+				class="com.xinchang.common.web.FastJsonRedisSerializer" />
 		</property>
 		<property name="hashKeySerializer">
 			<bean
@@ -44,7 +44,7 @@
 		</property>
 		<property name="hashValueSerializer">
 			<bean
-				class="com.greentown.common.web.FastJsonRedisSerializer" />
+				class="com.xinchang.common.web.FastJsonRedisSerializer" />
 		</property>
 	</bean>
 </beans>

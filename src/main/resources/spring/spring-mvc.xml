@@ -22,7 +22,7 @@
 	<mvc:annotation-driven>
 		<mvc:message-converters register-defaults="true">
 			<bean
-				class="com.greentown.common.web.JsonpFastJsonHttpMessageConverter">
+				class="com.xinchang.common.web.JsonpFastJsonHttpMessageConverter">
 				<property name="features">
 					<list>
 						<!-- <value>PrettyFormat</value> -->
@@ -46,7 +46,7 @@
 		class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
 		<property name="defaultViews">
 			<list>
-				<bean class="com.greentown.common.web.JsonpFastJsonJsonView">
+				<bean class="com.xinchang.common.web.JsonpFastJsonJsonView">
 					<property name="extractValueFromSingleKeyModel">
 						<value>true</value>
 					</property>
@@ -76,7 +76,7 @@
 		<mvc:interceptor>
 			<mvc:mapping path="/**" />
  
-			<bean class="com.greentown.learn.bootdemo.interceptor.LoginCheckInterceptor"></bean>
+			<bean class="com.xinchang.learn.bootdemo.interceptor.LoginCheckInterceptor"></bean>
 		</mvc:interceptor>
 		
 	</mvc:interceptors>
