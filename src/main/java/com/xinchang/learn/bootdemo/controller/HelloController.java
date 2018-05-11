@@ -34,16 +34,6 @@ public class HelloController {
 	}
 	
 	
-	@ApiOperation("获取用户信息")
-	@PostMapping(value="/api/hello/user")
-	public UserVO getUser() {
-		UserVO user=new UserVO();
-		user.setBroker("吕自强");
-		user.setHouseId(12222L);
-		redisTemplate.opsForValue().set("test", "test01");
-		return user;
-	}
-	
 	
 	@ApiOperation("添加")
 	@PostMapping(value = "/api/hello/helloPut")
