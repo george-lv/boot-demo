@@ -35,13 +35,14 @@ import org.springframework.web.servlet.NoHandlerFoundException;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 import org.springframework.web.servlet.mvc.multiaction.NoSuchRequestHandlingMethodException;
 
-import com.greentown.common.exception.BusinessLogicException;
-import com.greentown.common.response.ResponseEntity;
-import com.greentown.common.web.CustomHttpHeaderUtil;
-import com.greentown.common.web.ExceptionConstants.ResultEnums;
-import com.greentown.common.web.GlobalConstants;
-import com.greentown.common.web.JsonpFastJsonHttpMessageConverter;
-import com.greentown.common.web.ExceptionConstants;
+import com.xinchang.common.exception.BusinessLogicException;
+import com.xinchang.common.response.ResponseEntity;
+import com.xinchang.common.web.CustomHttpHeaderUtil;
+import com.xinchang.common.web.ExceptionConstants;
+import com.xinchang.common.web.GlobalConstants;
+import com.xinchang.common.web.JsonpFastJsonHttpMessageConverter;
+import com.xinchang.common.web.ExceptionConstants.ResultEnums;
+
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

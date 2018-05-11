@@ -10,7 +10,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
-import com.greentown.common.web.FastJsonRedisSerializer;
+import com.xinchang.common.web.FastJsonRedisSerializer;
 
 import redis.clients.jedis.JedisPoolConfig;
 

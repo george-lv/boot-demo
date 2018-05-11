@@ -1,4 +1,4 @@
-package com.greentown.learn.bootdemo;
+package com.xinchang.learn.bootdemo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
