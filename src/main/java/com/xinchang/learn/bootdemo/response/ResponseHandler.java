@@ -1,4 +1,4 @@
-package com.greentown.learn.bootdemo.response;
+package com.xinchang.learn.bootdemo.response;
 
 
 import org.apache.commons.lang3.StringUtils;
@@ -35,12 +35,13 @@ import org.springframework.web.servlet.NoHandlerFoundException;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 import org.springframework.web.servlet.mvc.multiaction.NoSuchRequestHandlingMethodException;
 
-import com.greentown.learn.bootdemo.common.CustomHttpHeaderUtil;
-import com.greentown.learn.bootdemo.common.ExceptionConstants.ResultEnums;
-import com.greentown.learn.bootdemo.common.GlobalConstants;
-import com.greentown.learn.bootdemo.common.JsonpFastJsonHttpMessageConverter;
-import com.greentown.learn.bootdemo.exception.BusinessLogicException;
-import com.greentown.learn.bootdemo.common.ExceptionConstants;
+import com.greentown.common.exception.BusinessLogicException;
+import com.greentown.common.response.ResponseEntity;
+import com.greentown.common.web.CustomHttpHeaderUtil;
+import com.greentown.common.web.ExceptionConstants.ResultEnums;
+import com.greentown.common.web.GlobalConstants;
+import com.greentown.common.web.JsonpFastJsonHttpMessageConverter;
+import com.greentown.common.web.ExceptionConstants;
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

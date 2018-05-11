@@ -1,4 +1,4 @@
-package com.greentown.learn.bootdemo.controller;
+package com.xinchang.learn.bootdemo.controller;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
@@ -10,7 +10,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
-import com.greentown.learn.bootdemo.common.FastJsonRedisSerializer;
+import com.greentown.common.web.FastJsonRedisSerializer;
 
 import redis.clients.jedis.JedisPoolConfig;
 

@@ -1,4 +1,4 @@
-package com.greentown.learn.bootdemo.controller;
+package com.xinchang.learn.bootdemo.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

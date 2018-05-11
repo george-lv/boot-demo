@@ -1,16 +1,16 @@
-package com.greentown.learn.bootdemo.controller;
+package com.xinchang.learn.bootdemo.controller;
 
 import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.greentown.learn.bootdemo.model.vo.UserVO;
+import com.xinchang.learn.bootdemo.model.vo.UserVO;
 
 import io.swagger.annotations.ApiOperation;
 
@@ -24,7 +24,7 @@ public class HelloController {
 	@Value("${msg}")
 	private String msg;
 	
-	@RequestMapping(method = RequestMethod.GET, value = "/api/hello")
+	@GetMapping(value="/api/hello")
 	@ApiOperation("获取")
 	public String sayHello() {
 		
@@ -35,7 +35,7 @@ public class HelloController {
 	
 	
 	@ApiOperation("获取用户信息")
-	@RequestMapping(method = RequestMethod.GET, value = "/api/hello/user")
+	@PostMapping(value="/api/hello/user")
 	public UserVO getUser() {
 		UserVO user=new UserVO();
 		user.setBroker("吕自强");
@@ -46,7 +46,7 @@ public class HelloController {
 	
 	
 	@ApiOperation("添加")
-	@RequestMapping(method = RequestMethod.POST, value = "/api/hello/helloPut")
+	@PostMapping(value = "/api/hello/helloPut")
 	public String putHello(@RequestBody UserVO uservo) {
 		return "Swagger Hello World";
 	}

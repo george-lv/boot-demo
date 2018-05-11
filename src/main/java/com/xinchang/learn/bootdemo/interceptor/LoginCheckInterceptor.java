@@ -1,4 +1,4 @@
-package com.greentown.learn.bootdemo.interceptor;
+package com.xinchang.learn.bootdemo.interceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

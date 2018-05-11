@@ -15,12 +15,14 @@
 	
 	<!-- 激活自动代理功能 -->
 	<aop:aspectj-autoproxy proxy-target-class="true" />
+	
 
+	
 	<!-- fastjson转换requestbody和javabean -->
 	<mvc:annotation-driven>
 		<mvc:message-converters register-defaults="true">
 			<bean
-				class="com.greentown.learn.bootdemo.common.JsonpFastJsonHttpMessageConverter">
+				class="com.greentown.common.web.JsonpFastJsonHttpMessageConverter">
 				<property name="features">
 					<list>
 						<!-- <value>PrettyFormat</value> -->
@@ -44,7 +46,7 @@
 		class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
 		<property name="defaultViews">
 			<list>
-				<bean class="com.greentown.learn.bootdemo.common.JsonpFastJsonJsonView">
+				<bean class="com.greentown.common.web.JsonpFastJsonJsonView">
 					<property name="extractValueFromSingleKeyModel">
 						<value>true</value>
 					</property>

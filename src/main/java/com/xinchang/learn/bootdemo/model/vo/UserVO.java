@@ -1,6 +1,8 @@
-package com.greentown.learn.bootdemo.model.vo;
+package com.xinchang.learn.bootdemo.model.vo;
 
 import java.util.Date;
+
+import com.greentown.common.vo.BaseVO;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

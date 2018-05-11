@@ -1,4 +1,4 @@
-package com.greentown.learn.bootdemo.controller;
+package com.xinchang.learn.bootdemo.controller;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package com.greentown.learn.bootdemo.controller;
+package com.xinchang.learn.bootdemo.controller;
 
 import java.awt.Color;
 import java.io.IOException;
